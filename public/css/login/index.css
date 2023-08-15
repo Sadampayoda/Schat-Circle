@@ -1,0 +1,80 @@
+
+.login-img{
+    height: 100vh;
+}
+
+.iconInRegis{
+    position: absolute;
+    font-size: 80px;
+    transition: all 0.5s ease-in;
+}
+
+.iconInRegis:hover{
+    font-size: 100px;
+    /* margin-bottom: 100px; */
+    /* top: 10px; */
+}
+
+/* .formLogin{
+    margin-top: 0px;
+    text-align: left;
+}
+
+
+
+/* @media (min-width: 992px) and (max-width: 1199px){
+    .login-img{
+        width: 700px;
+        height: 500px;
+    }
+} */
+
+.shadowGreen{
+    box-shadow: 0px 5px 5px rgba(0, 255, 0, 0.7);
+}
+
+/* .shadowGreen{
+    box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.7);
+} */
+
+@media (max-width: 767px)  {
+    body{
+        overflow-x: hidden;
+    }
+    .login-img{
+        width: 490px;
+        height: 480px;
+        margin-left: -15px;
+    }
+
+    .formLogin{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .circleFrom{
+        width: 502px;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid black; */
+    }
+    .heght-background{
+        height: 200px;
+        /* margin-left: -20px; */
+    }
+    .iconInRegis{
+        margin-left: -20px;
+    }
+
+    /* .iconInRegis{
+        position: absolute;
+        font-size: 80px;
+        transition: all 0.5s ease-in;
+    }
+    
+    .iconInRegis:hover{
+        font-size: 100px;
+        /* margin-bottom: 100px; */
+        /* top: 10px; */
+   
+}

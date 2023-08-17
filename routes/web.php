@@ -15,8 +15,8 @@ use App\Http\Controllers\ValidationUserController;
 |
 */
 
-Route::middleware('auth')->group(function(){
-    Route::get('/',[DashboardController::class,'index']);
+Route::middleware('guest')->group(function(){
+    Route::get('/',[DashboardController::class,'index'])->name('chatting');
 });
 
 // Route::group()

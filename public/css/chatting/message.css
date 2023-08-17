@@ -1,0 +1,11 @@
+.size-chat{
+    height: 60vh;
+}
+
+.chat-message {
+    background-color: #8DC63F;    
+}
+.scroll-vertical {
+    overflow-y: auto;
+    /* white-space: nowrap; Hindari pembentukan baris baru */
+}

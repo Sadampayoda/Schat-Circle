@@ -48,10 +48,35 @@
             <p>
                 Schat Circle mewujudkan visi tentang dunia yang lebih terhubung melalui teknologi. Ini adalah aplikasi yang mengubah cara kita berkomunikasi, menghadirkan ruang yang dinamis dan ramah untuk berbagi pengalaman hidup dan mempererat ikatan sosial di seluruh dunia.
             </p>
-                
-                
+        </div>
+    </div>
+    <div class="row mt-5 pt-5 border-top">
+        <div class="col text-center mt-5 pt-5">
+            <h1>Daftar sekarang</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="d-flex justify-content-center">
+
+            <div class="col-5">
+                <div class="mb-3">
+                    <label class="form-label"> <i class="bi bi-person-bounding-box me-2"></i> Username</label>
+                    <input type="text" class="form-control border-dark" name="name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"> <i class="bi bi-file-lock-fill me-2"></i> Password</label>
+                    <input type="password" class="form-control border-dark"  name="password">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"> <i class="bi bi-file-lock-fill me-2"></i> Konfirmasi password</label>
+                    <input type="password" class="form-control border-dark"  name="konfirmasi">
+                </div>
+                <div class="d-grid mb-3 mt-2">
+                    <button type="submit" class="btn btn-dark">Buat akun</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
+@include('property.footer')
 @endsection

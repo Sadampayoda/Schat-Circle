@@ -20,12 +20,12 @@
                     <div class="col-8 circleFrom">
                         <form action="" method="post">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label"> <i class="bi bi-person-bounding-box me-2"></i> Email address</label>
-                                <input type="email" class="form-control border-dark" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label"> <i class="bi bi-person-bounding-box me-2"></i> Username</label>
+                                <input type="text" class="form-control border-dark" name="name">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label"> <i class="bi bi-file-lock-fill me-2"></i> Password</label>
-                                <input type="password" class="form-control border-dark" id="exampleInputPassword1">
+                                <label class="form-label"> <i class="bi bi-file-lock-fill me-2"></i> Password</label>
+                                <input type="password" class="form-control border-dark"  name="password">
                             </div>
                             <div class="d-grid mb-3 mt-2">
                                 <button type="submit" class="btn btn-dark">Masuk aplikasi</button>

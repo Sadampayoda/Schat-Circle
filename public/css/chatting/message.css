@@ -9,3 +9,11 @@
     overflow-y: auto;
     /* white-space: nowrap; Hindari pembentukan baris baru */
 }
+
+.shadowProfile{
+    transition: all 0.5s ease-in-out;
+}
+
+.shadowProfile:hover{
+    box-shadow: 0px 6px 12px black;
+}

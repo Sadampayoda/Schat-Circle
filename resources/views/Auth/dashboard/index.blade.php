@@ -47,7 +47,7 @@
             <div class="input-group p-3 ">
                 <input type="text" class="form-control" placeholder="Ketik apa yang kamu mau..." aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <button class="input-group-text btn btn-dark border-light" id="basic-addon2">Send</button>
-              </div>              
+            </div>              
         </div>
     </div>
 </div>

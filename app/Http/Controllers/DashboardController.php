@@ -12,4 +12,18 @@ class DashboardController extends Controller
             'page' => 'Chatting'
         ]);
     }
+
+    public function updateAplication()
+    {
+        return view('Auth.dashboard.update',[
+            'page' => 'Update Aplikasi',
+        ]);
+    }
+
+    public function searchAccount()
+    {
+        return view('Auth.dashboard.search',[
+            'page' => 'Search',
+        ]);
+    }
 }

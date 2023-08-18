@@ -7,16 +7,32 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto text-dark text-border text-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('chatting')}}">Chatting</a>
+                    @if ($page == 'Chatting')
+                        <a class="nav-link text-light" aria-current="page" href="{{route('chatting')}}">Chatting</a>
+                    @else
+                        <a class="nav-link" aria-current="page" href="{{route('chatting')}}">Chatting</a>
+                    @endif
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Update</a>
+                    @if ($page == 'Update Aplikasi')
+                        <a class="nav-link text-light"  href="{{route('updateApk')}}">Update</a>
+                    @else
+                        <a class="nav-link"  href="{{route('updateApk')}}">Update</a>
+                    @endif
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Search</a>
+                    @if ($page == 'Search')
+                        <a class="nav-link text-light"  href="{{route('search')}}">Search</a>
+                    @else
+                        <a class="nav-link"  href="{{route('search')}}">Search</a>
+                    @endif
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Profile</a>
+                    @if ($page == 'Profile')
+                        <a class="nav-link text-light"  href="{{route('profile')}}">Profile</a>
+                    @else
+                        <a class="nav-link"  href="{{route('profile')}}">Profile</a>
+                    @endif
                 </li>
             </ul>
         </div>

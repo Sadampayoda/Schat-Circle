@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ValidationUserController;
 
 /*
@@ -17,6 +18,9 @@ use App\Http\Controllers\ValidationUserController;
 
 Route::middleware('guest')->group(function(){
     Route::get('/',[DashboardController::class,'index'])->name('chatting');
+    Route::get('/update-aplikasi',[DashboardController::class,'updateAplication'])->name('updateApk');
+    Route::get('/search-account',[DashboardController::class,'searchAccount'])->name('search');
+    Route::get('/profile',[ProfileController::class,'index'])->name('profile');
 });
 
 // Route::group()

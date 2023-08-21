@@ -1,16 +1,18 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
 use App\Http\Requests\ValidasiUserRequest;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class ValidasiUserRequestTest extends TestCase
 {
     /**
-     * A basic test example.
+     * A basic feature test example.
      */
-    public function RequestValidasi(): void
+    public function ValidasiUser(): void
     {
         $classRequest = new ValidasiUserRequest();
         

@@ -5,12 +5,12 @@ namespace Tests\Unit;
 use PHPUnit\Framework\TestCase;
 use App\Http\Requests\ValidasiUserRequest;
 
-class ExampleTest extends TestCase
+class RequestTest extends TestCase
 {
     /**
-     * A basic test example.
+     * A basic feature test example.
      */
-    public function RequestValidasi(): void
+    public function Request(): void
     {
         $classRequest = new ValidasiUserRequest();
         

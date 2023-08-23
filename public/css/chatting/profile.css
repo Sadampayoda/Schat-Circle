@@ -1,0 +1,8 @@
+.background-photo{
+    height: 200px;
+    overflow: hidden;
+}
+
+.background-photo img{
+    object-fit: cover;
+}

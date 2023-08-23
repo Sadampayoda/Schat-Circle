@@ -12,4 +12,18 @@ class ProfileController extends Controller
             'page' => 'Profile',
         ]);
     }
+
+    public function edit()
+    {
+        return view('Auth.profile.edit',[
+            'page' => 'Edit profile',
+        ]);
+    }
+
+    public function editPassword()
+    {
+        return view('Auth.profile.changePassword',[
+            'page' => 'Password'
+        ]);
+    }
 }

@@ -21,6 +21,8 @@ Route::middleware('guest')->group(function(){
     Route::get('/update-aplikasi',[DashboardController::class,'updateAplication'])->name('updateApk');
     Route::get('/search-account',[DashboardController::class,'searchAccount'])->name('search');
     Route::get('/profile',[ProfileController::class,'index'])->name('profile');
+    Route::get('/profile/edit',[ProfileController::class,'edit'])->name('editProfile');
+    Route::get('/profile/edit/password',[ProfileController::class,'editPassword'])->name('changePassword');
 });
 
 // Route::group()

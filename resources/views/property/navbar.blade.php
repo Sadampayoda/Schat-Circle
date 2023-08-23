@@ -28,7 +28,7 @@
                     @endif
                 </li>
                 <li class="nav-item">
-                    @if ($page == 'Profile')
+                    @if ($page == 'Profile' || $page == 'Edit profile' || $page == 'Password')
                         <a class="nav-link text-light"  href="{{route('profile')}}">Profile</a>
                     @else
                         <a class="nav-link"  href="{{route('profile')}}">Profile</a>

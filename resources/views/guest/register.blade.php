@@ -9,6 +9,30 @@
         </div>
     </div>
 </div>
+<div class="container">
+    @if ($errors->any())
+        <div class="row">
+            <div class="col text-center">
+                <h1>Error message</h1>
+                <p>Registrasi anda gagal, coba lagi</p>
+            </div>
+        </div>
+    @endif
+    <div class="row d-flex justify-content-center">
+        <div class="col-6">
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </div>
+    </div>
+</div>
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#000000" fill-opacity="1" d="M0,0L60,42.7C120,85,240,171,360,197.3C480,224,600,192,720,165.3C840,139,960,117,1080,128C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
 </svg>
@@ -55,27 +79,30 @@
             <h1>Daftar sekarang</h1>
         </div>
     </div>
+    
     <div class="row mt-5">
-        <div class="d-flex justify-content-center">
-
-            <div class="col-5">
-                <div class="mb-3">
-                    <label class="form-label"> <i class="bi bi-person-bounding-box me-2"></i> Username</label>
-                    <input type="text" class="form-control border-dark" name="name">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label"> <i class="bi bi-file-lock-fill me-2"></i> Password</label>
-                    <input type="password" class="form-control border-dark"  name="password">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label"> <i class="bi bi-file-lock-fill me-2"></i> Konfirmasi password</label>
-                    <input type="password" class="form-control border-dark"  name="konfirmasi">
-                </div>
-                <div class="d-grid mb-3 mt-2">
-                    <button type="submit" class="btn btn-dark">Buat akun</button>
+        <form action="{{route('newAccount')}}" method="post">
+            @csrf
+            <div class="d-flex justify-content-center">
+                <div class="col-5">
+                    <div class="mb-3">
+                        <label class="form-label"> <i class="bi bi-person-bounding-box me-2"></i> Username</label>
+                        <input type="text" class="form-control border-dark" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"> <i class="bi bi-file-lock-fill me-2"></i> Password</label>
+                        <input type="password" class="form-control border-dark"  name="password">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"> <i class="bi bi-file-lock-fill me-2"></i> Konfirmasi password</label>
+                        <input type="password" class="form-control border-dark"  name="konfirmasi">
+                    </div>
+                    <div class="d-grid mb-3 mt-2">
+                        <button type="submit" class="btn btn-dark">Buat akun</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 @include('property.footer')

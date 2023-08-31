@@ -24,7 +24,9 @@ class ValidationUserController extends Controller
 
     public function createAccountUser(ValidasiUserRequest $request)
     {
-
+        $encryPassword = bcrypt($request->password);
+        return redirect()->route('chatting');
+       
     }
 
     public function validasionUserForInAplication(ValidasiUserRequest $request)

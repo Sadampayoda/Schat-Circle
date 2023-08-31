@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ValidationUserController;
 use App\Models\Chatting;
 use App\Models\User;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,19 +20,26 @@ use App\Models\User;
 */
 
 Route::middleware('guest')->group(function(){
-    Route::get('/',[DashboardController::class,'index'])->name('chatting');
-    Route::get('/update-aplikasi',[DashboardController::class,'updateAplication'])->name('updateApk');
-    Route::get('/search-account',[DashboardController::class,'searchAccount'])->name('search');
-    Route::get('/profile',[ProfileController::class,'index'])->name('profile');
-    Route::get('/profile/edit',[ProfileController::class,'edit'])->name('editProfile');
-    Route::get('/profile/edit/password',[ProfileController::class,'editPassword'])->name('changePassword');
+    Route::controller(DashboardController::class)->group(function(){
+        Route::match(['get', 'post'], '/', 'index')->name('chatting');
+        Route::get('/update-aplikasi','updateAplication')->name('updateApk');
+        Route::get('/search-account','searchAccount')->name('search');
+    });
+    Route::controller(ProfileController::class)->group(function(){
+        Route::get('/profile','index')->name('profile');
+        Route::get('/profile/edit','edit')->name('editProfile');
+        Route::get('/profile/edit/password','editPassword')->name('changePassword');
+    });
 });
 
 // Route::group()
-Route::middleware('guest')->group(function(){
+Route::middleware(['guest'])->group(function(){
     Route::prefix('auth')->group(function(){
-        Route::get('/login',[ValidationUserController::class,'indexLogin'])->name('login');
-        Route::get('/register',[ValidationUserController::class,'indexRegister'])->name('register'); 
+        Route::controller(ValidationUserController::class)->group(function(){
+            Route::get('/login','indexLogin')->name('login');
+            Route::get('/register','indexRegister')->name('register'); 
+            Route::post('/registerValidation', 'createAccountUser')->name('newAccount');
+        });
     });
 });
 

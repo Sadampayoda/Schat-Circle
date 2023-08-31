@@ -11,7 +11,7 @@ class ValidasiUserRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,19 +21,22 @@ class ValidasiUserRequest extends FormRequest
      */
     public function rules(): array
     {
+        $data = [];
         if($this->routeIs('login')){
-            return [
+            $data = [
                 'username' => 'required',
                 'password' => 'required',
             ];
 
-        } elseif($this->routeIs('register')){
-            return [
+        } elseif($this->routeIs('newAccount')){
+            // var_dump('oke');die;
+            $data = [
                 'username' => 'required|max:50|unique:users,username|min:5',
                 'password' => 'required|min:5',
                 'konfirmasi' => 'required|same:password'
             ];
-        }
+        } 
+        return $data;
     }
 
     public function messages()
